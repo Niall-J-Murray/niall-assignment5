@@ -26,9 +26,12 @@ public class CustomArrayList<T> implements CustomList<T> {
 
 	@Override
 	public int getSize() {
-		int size;
-		size = items.length;
-
+		int size = 0;
+		for (Object object : items) {
+			if (object != null) {
+				size++;
+			}
+		}
 		return size;
 	}
 
